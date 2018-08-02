@@ -1,0 +1,28 @@
+>> project2_controller
+	Package that contains all controller files. Compiles and runs in ROS on the beaglebone. Files like "CMakeLists" and "package.xml" are required setup files that define the ROS node properties.
+
+>> project2_controller/src/project2_controller
+
+	Main c++ code for the program. Includes the logic, subscriber, PWM and digital outputs.
+
+>> project2_controller/src/pwm.cpp
+
+	Custom c++ code that makes using pwm output easier. Defines functions like "enablePWM(pinNumber)"
+
+>> project2_controller/src/digitalIO.cpp
+
+	Custom c++ code that makes using digital input/output easier. Example: "digitalWrite(pinNumber, value)"
+
+>> project2_controller/src/BBB_GPIO.h
+
+	C++ header file used to declare functions from pwm.cpp and digitalIO.cpp
+
+===============================================================
+
+>> BB-PWM-ALL-00A0.dtbo
+
+	Custom device tree file that enables three PWM outputs on the beaglebone black.
+
+>> enablePWMpins
+
+	Executable script that loads "BB-PWM-ALL-00A0.dtbo" to the beaglebone black.

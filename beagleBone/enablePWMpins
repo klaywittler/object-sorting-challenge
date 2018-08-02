@@ -1,0 +1,11 @@
+echo BB-PWM-ALL > /sys/devices/platform/bone_capemgr/slots
+sleep .5
+cat /sys/devices/platform/bone_capemgr/slots
+sleep .5
+
+echo 0 > /sys/class/pwm/pwmchip0/export
+sleep .5
+echo 0 > /sys/class/pwm/pwmchip2/export
+sleep .5
+echo 0 > /sys/class/pwm/pwmchip4/export
+
